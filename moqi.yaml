@@ -283,12 +283,7 @@ punctuator:
   #   half_shape 半角标点映射
   #   symbols    Rime 的预设配置是以 '/' 前缀开头输出一系列字符，自定义的 symbols_caps_v.yaml 修改成了 '/' 开头。
   punctuator:
-    full_shape:
-      __include: default:/punctuator/full_shape  # 从 default.yaml 导入配置
-    half_shape:
-      __include: default:/punctuator/half_shape  # 从 default.yaml 导入配置
-    symbols:
-      __include: symbols_caps_v:/symbols         # 从 symbols_caps_v.yaml 导入配置
+    __include: 000_default:/punctuator  # 从 default.yaml 导入配置
 
 guide:
   recognizer:
@@ -428,9 +423,9 @@ speller_algebra:
   - derive|^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(\w)$|$5$6$7$8/| # 双拼+2位辅助码的情况 结尾加/
   
   - derive|^(\w)(\w),(\w)0.+$|$1$2$3/| # 3码全码的字，3码全码后加/
-  - derive|^(\w)(\w),00.+$|$1$2/| # 1码全码的字，3码全码后加/
-  - derive|^(\w)0,00.+$|$1/| # 1码全码的字，3码全码后加/
+  - derive|^(\w)(\w),00.+$|$1$2/| # 2码全码的字，2码全码后加/
+  - derive|^(\w)0,00.+$|$1/| # 1码全码的字，1码全码后加/
 
   - derive|^.+;(\w)(\w),(\w)0$|$1$2$3/| # 3码全码的字，3码全码后加/
-  - derive|^.+;(\w)(\w),00$|$1$2/| # 1码全码的字，3码全码后加/
-  - derive|^.+;(\w)0,00$|$1/| # 1码全码的字，3码全码后加/
+  - derive|^.+;(\w)(\w),00$|$1$2/| # 2码全码的字，2码全码后加/
+  - derive|^.+;(\w)0,00$|$1/| # 1码全码的字，1码全码后加/

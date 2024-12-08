@@ -1,0 +1,12 @@
+# Rime table
+#@/db_name	user_tg.custom.dict
+#@/db_type	tabledb
+#@/rime_version	1.11.2
+#@/tick	9
+是	ot,s0;o0,00	0
+我	tu,pg;t0,00	0
+鹿	xl,00	2
+鹿鹿	xl,00 xl,00	10
+鹿鹿是	xl,00 xl,00 ot,s0;o0,00	2
+鹿鹿我	xl,00 xl,00 tu,pg;t0,00	2
+度	xl,ry	2

@@ -1,10 +1,5 @@
 # Project exclude paths
 /venv/
-/cn_dicts_dazhu/
-/cn_dicts_temp/
-/cn_dicts_sancang/
-/cn_dicts_xh_cangjie/
-sancang.dict.yaml
 .DS_Store
 
 # IDEA
@@ -28,9 +23,6 @@ sync/
 *.userdb/
 
 *.zip
-/rime-sentence-schemas/
 
-# 用户自定义配置
-*.custom.yaml
-*.custom.*
-program/generate_dict_code/jdh.dict.yaml
+# 我的个人配置
+*personal*
