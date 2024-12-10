@@ -1,0 +1,11 @@
+#下面的 #号 是注释符，注释了就无效了，删掉即可生效
+
+patch:
+  translator/dictionary: tigress_240831.extended #引入增补自定词典，这个不要改动
+
+  ## =========== 个人修改区 =================
+  # 让【 】可以直接上屏（对应的重复上屏的功能也没了）
+  speller/alphabet: ";'zyxwvutsrqponmlkjihgfedcba"
+  # 引入自定义符号文件:
+  punctuator/import_preset: 000_rays_symbols
+  speller/auto_select_pattern: ^;\w+|^\w{4}$  # 四码上屏功能
