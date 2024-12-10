@@ -18,10 +18,17 @@ use_preset_vocabulary: false
 #雙拼不支持 luna_pinyin.cn_en 詞庫，請用戶手動禁用。
 
 import_tables:
-  - cn_dicts_tiger/8105     # 字表
-  - cn_dicts_tiger/41448
+# 字表
+  # - cn_dicts_tiger/8105     
+  # - cn_dicts_tiger/41448
   
-  - cn_dicts_tiger/base     # 基础词库
+  - cn_dicts_tiger/tigress
+  - cn_dicts_tiger/tigress_ci
+  - cn_dicts_tiger/tigress_simp_ci
+  # - cn_dicts_tiger/tiger
+
+# 词库
+  - cn_dicts_tiger/base     # 基础
   - cn_dicts_tiger/ext      # 扩展词库
   - cn_dicts_tiger/others   # 一些杂项 容错音和错字 可以不开
 
