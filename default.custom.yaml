@@ -1,6 +1,7 @@
 patch:
   schema_list:
-    - {schema: 000_tigo}
-    - {schema: 000_tigo_test}
-    - {schema: tiger}
+    # - {schema: 000_tigo}
+    # - {schema: 000_tigo_test}
+    - {schema: tigo}
     - {schema: tigo_ori}
+    - {schema: tigress_240831}
