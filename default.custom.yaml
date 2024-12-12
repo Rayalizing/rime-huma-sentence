@@ -1,7 +1,8 @@
 patch:
   schema_list:
-    # - {schema: 000_tigo}
-    # - {schema: 000_tigo_test}
-    - {schema: tigo}
-    - {schema: tigo_ori}
-    - {schema: tigress_240831}
+    # - {schema: 000_tigo}  # 开发中，勿选
+    # - {schema: 000_tigo_test}  # 开发中，勿选
+    - {schema: 000_Tigo_Matrix}  # 九键虎码整句 (基于墨奇)
+    - {schema: tigo}  # 虎码整句 实验版 (基于墨奇)
+    - {schema: tigo_ori}  # 虎码整句 原版 (墨奇)
+    - {schema: tigress_240831}  # 虎码词版 (基于官方优化)

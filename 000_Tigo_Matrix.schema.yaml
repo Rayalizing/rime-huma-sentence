@@ -3,29 +3,23 @@
 # https://github.com/gaboolic/rime-shuangpin-fuzhuma
 
 schema:
-  schema_id: Tigo_Matrix
+  schema_id: 000_Tigo_Matrix
   name: 九键虎码(整句)
   version: "2024-12-05"
   author:
-    - gaboolic
-    - Rayalizing
+    - {gaboolic}
+    - {Rayalizing}
   description: |
-    虎码整句: https://github.com/gaboolic/rime-shuangpin-fuzhuma 九键虎码: https://github.com/Rayalizing/TigerMatrix
-  dependencies:
-    - stroke
-    - emoji
-    - easy_en
-    - jp_sela
+    九键虎码(整句),基于墨奇
 
 __include: moqi.yaml:/switches_engine
 __include: moqi.yaml:/phrase # 置顶
-__include: moqi.yaml:/reverse #反查配置
-__include: moqi.yaml:/opencc_config # 拆分 英汉互译 火星文
-__include: default.custom.yaml:/patch/punctuator # 标点
+# __include: moqi.yaml:/reverse #反查配置
+# __include: moqi.yaml:/opencc_config # 拆分 英汉互译 火星文
 __include: moqi.yaml:/guide # 引导前缀配置
 
-punctuator:
-  __include: rays_symbols:/punctuator    # 从 rays_symbols.yaml 导入配置
+punctuator: # 标点
+  __include: 000_rays_symbols:/punctuator
 
 recognizer/patterns/punct: '^/([0-9@#]0?|[A-z]+)$'
 
@@ -37,109 +31,178 @@ speller:
   auto_select_pattern: ^[a-z]+;|\w{4}|^;\w+ 
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   alphabet: /*`;'zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1@#456789
-  # initials 定义仅作为始码的按键，排除'和*，让单个的'和*可以直接上屏
-  initials: /`;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1@#456789
-  # # 第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
-  # delimiter: " '"
+  # # initials 定义仅作为始码的按键，排除'和*，让单个的'和*可以直接上屏
+  # initials: /`;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1@#456789
+  # 第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
+  delimiter: " ;"
   ## speller 未允许 aj 表示 an
   algebra:
-    # __include: moqi.yaml:/speller_algebra
-    - derive/^(\w)(\w),(.+)$/$1$2/ # 纯双拼的情况(所有编码派生出前2码）
-    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(.+)$/$5$6/ # 纯双拼的情况(所有编码派生出前2码)
+  # 4码全码的字，全码后加;
+    - derive|^(\w)(\w),(\w)(\w)$|$1$2$3$4|
+    - derive|^(\w)(\w),(\w)(\w);(.+)$|$1$2$3$4|
+    - derive|^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(\w)$|$5$6$7$8|
+    - derive|^(\w)(\w)(\w)(\w)$|$1$2$3$4;|  # 使用derive，不加;也能出候选。
 
-    - derive/^(\w)(\w),(\w)(.+)$/$1$2$3/ # 双拼+一位辅助码的情况（所有编码派生出前3码）
-    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(.+)$/$5$6$7/ # 双拼+一位辅助码的情况（所有编码派生出前3码）
+  # # 3码全码的字，全码后加;
+  #   - derive|^(\w)(\w),(\w)0.+$|$1$2$3|
+  #   - derive|^.+;(\w)(\w),(\w)0$|$1$2$3|
+  #   - derive|^(\w)(\w)(\w)$|$1$2$3;|  # 使用derive，不加;也能出候选。
 
-    - derive/^(\w)(\w),(\w)(\w)$/$1$2$3$4'/ # 双拼+2位辅助码的情况（4码字） 结尾加'
-    - derive/^(\w)(\w),(\w)(\w);(.+)$/$1$2$3$4'/ # 双拼+2位辅助码的情况（4码字） 结尾加'
-    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(\w)$/$5$6$7$8'/ # 双拼+2位辅助码的情况（4码字） 结尾加'
-    
-    - derive/^(\w)(\w),(\w)0.+$/$1$2$3'/ # 3码全码的字，3码全码后加'
-    - derive/^(\w)(\w),00.+$/$1$2'/ # 2码全码的字，2码全码后加'
-    - derive/^(\w)0,00.+$/$1'/ # 1码全码的字，1码全码后加'
+  # 2码全码的字，全码后加;
+    - derive|^(\w)(\w),0.+$|$1$2|
+    - derive|^.+;(\w)(\w),00$|$1$2|
+    - derive|^(\w)(\w)$|$1$2;|  # 使用derive，不加;也能出候选。
 
-    - derive/^.+;(\w)(\w),(\w)0$/$1$2$3'/ # 3码全码的字，3码全码后加'
-    - derive/^.+;(\w)(\w),00$/$1$2'/ # 2码全码的字，2码全码后加'
-    - derive/^.+;(\w)0,00$/$1'/ # 1码全码的字，1码全码后加'
+  # # 1码全码的字，全码后加;
+  #   - derive|^(\w)0,0.+$|$1;|
+  #   - derive|^.+;(\w)0,00$|$1;|
+  #   # - derive|^(\w)0,0.+$|$1'|  
+  #   # - derive|^.+;(\w)0,00$|$1'|
+  #   - derive|^(\w)$|$1;|
+
+  # 派生出所有字词的前两码
+    # - derive/^(\w)(\w),(.+)$/$1$2/
+    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(.+)$/$5$6/
+    - derive/^(\w)(\w).+$/$1$2/
+  # 派生出所有字词的前三码
+    - derive/^(\w)(\w),(\w)(.+)$/$1$2$3/
+    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(.+)$/$5$6$7/
+    - derive/^(\w)(\w)(\w).+$/$1$2$3/
 
   ################### 无重码九键方案 ####################
-    - xlit/qwertyuiopasdfghjklzxcvbnm/QWERTYUIOPASDFGHJKLZXCVBNM/
+    # - xlit/qwertyuiopasdfghjklzxcvbnm/QWERTYUIOPASDFGHJKLZXCVBNM/
+    - xlit/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
+    # - xform/Q/q1/
+    # - xform/W/q2/
+    # - xform/E/q3/
+    # - xform/R/r1/
+    # - xform/T/r2/
+    # - xform/Y/r3/
+    # - xform/U/u1/
+    # - xform/I/u2/
+    # - xform/P/u3/
+
+    # - xform/A/a1/
+    # - xform/S/a2/
+    # - xform/D/a3/
+    # - xform/F/f1/
+    # - xform/G/f2/
+    # - xform/H/f3/
+    # - xform/J/j1/
+    # - xform/K/j2/
+    # - xform/L/j3/
+
+    # - xform/Z/z1/
+    # - xform/X/z2/
+    # - xform/C/z3/
+    # - xform/V/v1/
+    # - xform/O/v2/
+    # - xform/B/b1/
+    # - xform/N/b2/
+    # - xform/M/b3/
     - xform/Q/q1/
     - xform/W/q2/
-    - xform/E/q3/
-    - xform/R/r1/
-    - xform/T/r2/
-    - xform/Y/r3/
-    - xform/U/u1/
-    - xform/I/u2/
-    - xform/P/u3/
-
     - xform/A/a1/
-    - xform/S/a2/
-    - xform/D/a3/
-    - xform/F/f1/
-    - xform/G/f2/
-    - xform/H/f3/
+    - xform/B/a2/
+    - xform/C/a3/
+    - xform/D/d1/
+    - xform/E/d2/
+    - xform/F/d3/
+
+    - xform/G/g1/
+    - xform/H/g2/
+    - xform/I/g3/
     - xform/J/j1/
     - xform/K/j2/
     - xform/L/j3/
+    - xform/M/m1/
+    - xform/N/m2/
+    - xform/O/m3/
 
-    - xform/Z/z1/
-    - xform/X/z2/
-    - xform/C/z3/
-    - xform/V/v1/
-    - xform/O/v2/
-    - xform/B/b1/
-    - xform/N/b2/
-    - xform/M/b3/
+    - xform/P/p1/
+    - xform/R/p2/
+    - xform/S/p3/
+    - xform/T/t1/
+    - xform/U/t2/
+    - xform/V/t3/
+    - xform/X/x1/
+    - xform/Y/x2/
+    - xform/Z/x3/
     # 第三码，字母选择
     ## 对原四码的处理：
     - xform/([a-z])([1-3])([a-z])([1-3])([a-z])([1-3])([a-z])([1-3])/$1$3$2$4$5$7$6$8/
+    # - xform/([a-z]+)11/$1q/
+    # - xform/([a-z]+)12/$1r/
+    # - xform/([a-z]+)13/$1u/
+    # - xform/([a-z]+)21/$1a/
+    # - xform/([a-z]+)22/$1f/
+    # - xform/([a-z]+)23/$1j/
+    # - xform/([a-z]+)31/$1z/
+    # - xform/([a-z]+)32/$1v/
+    # - xform/([a-z]+)33/$1b/  # 经过上述处理，原四码变为六码连续字母：([a-z])([a-z])([a-z])([a-z])([a-z])([a-z])
     - xform/([a-z]+)11/$1q/
-    - xform/([a-z]+)12/$1r/
-    - xform/([a-z]+)13/$1u/
-    - xform/([a-z]+)21/$1a/
-    - xform/([a-z]+)22/$1f/
-    - xform/([a-z]+)23/$1j/
-    - xform/([a-z]+)31/$1z/
-    - xform/([a-z]+)32/$1v/
-    - xform/([a-z]+)33/$1b/  # 经过上述处理，原四码变为六码连续字母：([a-z])([a-z])([a-z])([a-z])([a-z])([a-z])
+    - xform/([a-z]+)12/$1a/
+    - xform/([a-z]+)13/$1d/
+    - xform/([a-z]+)21/$1g/
+    - xform/([a-z]+)22/$1j/
+    - xform/([a-z]+)23/$1m/
+    - xform/([a-z]+)31/$1p/
+    - xform/([a-z]+)32/$1t/
+    - xform/([a-z]+)33/$1x/  # 经过上述处理，原四码变为六码连续字母：([a-z])([a-z])([a-z])([a-z])([a-z])([a-z])
     ## 对原三码的处理：
     - xform/([a-z])([1-3])([a-z])([1-3])([a-z])([1-3])/$1$3$2$4$5$6/
+    # - xform/([a-z]+)11/$1q/
+    # - xform/([a-z]+)12/$1r/
+    # - xform/([a-z]+)13/$1u/
+    # - xform/([a-z]+)21/$1a/
+    # - xform/([a-z]+)22/$1f/
+    # - xform/([a-z]+)23/$1j/
+    # - xform/([a-z]+)31/$1z/
+    # - xform/([a-z]+)32/$1v/
+    # - xform/([a-z]+)33/$1b/  # 经过上述处理，原三码变为四码连续字母+一码数字：([a-z])([a-z])([a-z])([a-z])([1-3])
     - xform/([a-z]+)11/$1q/
-    - xform/([a-z]+)12/$1r/
-    - xform/([a-z]+)13/$1u/
-    - xform/([a-z]+)21/$1a/
-    - xform/([a-z]+)22/$1f/
-    - xform/([a-z]+)23/$1j/
-    - xform/([a-z]+)31/$1z/
-    - xform/([a-z]+)32/$1v/
-    - xform/([a-z]+)33/$1b/  # 经过上述处理，原三码变为四码连续字母+一码数字：([a-z])([a-z])([a-z])([a-z])([1-3])
+    - xform/([a-z]+)12/$1a/
+    - xform/([a-z]+)13/$1d/
+    - xform/([a-z]+)21/$1g/
+    - xform/([a-z]+)22/$1j/
+    - xform/([a-z]+)23/$1m/
+    - xform/([a-z]+)31/$1p/
+    - xform/([a-z]+)32/$1t/
+    - xform/([a-z]+)33/$1x/  # 经过上述处理，原三码变为四码连续字母+一码数字：([a-z])([a-z])([a-z])([a-z])([1-3])
     ### 处理([a-z])([a-z])([a-z])([a-z])([1-3])的后两位：
-    - xform/([a-z][a-z][a-z][a-z])1'/$1\x2F/
-    - xform/([a-z][a-z][a-z][a-z])2'/$1*/
-    - xform/([a-z][a-z][a-z][a-z])3'/$1`/
+    # - xform/([a-z][a-z][a-z][a-z])1;/$1\x2F/
+    # - xform/([a-z][a-z][a-z][a-z])2;/$1*/
+    # - xform/([a-z][a-z][a-z][a-z])3;/$1`/
     - xform/([a-z][a-z][a-z][a-z])1/$1\x2F/
     - xform/([a-z][a-z][a-z][a-z])2/$1*/
-    - xform/([a-z][a-z][a-z][a-z])3/$1`/  # 经过上述处理，原三码变为四码连续字母+一码符号（符号有分词作用，其后不用跟单引号）：([a-z])([a-z])([a-z])([a-z])([*`\x2F])
+    - xform/([a-z][a-z][a-z][a-z])3/$1`/  # 经过上述处理，原三码变为四码连续字母+一码符号：([a-z])([a-z])([a-z])([a-z])([*`\x2F])。（符号有分词作用，其后不用跟分隔符）
     ## 对原二码的处理：
     - xform/([a-z])([1-3])([a-z])([1-3])/$1$3$2$4/
+    # - xform/([a-z]+)11/$1q/
+    # - xform/([a-z]+)12/$1r/
+    # - xform/([a-z]+)13/$1u/
+    # - xform/([a-z]+)21/$1a/
+    # - xform/([a-z]+)22/$1f/
+    # - xform/([a-z]+)23/$1j/
+    # - xform/([a-z]+)31/$1z/
+    # - xform/([a-z]+)32/$1v/
+    # - xform/([a-z]+)33/$1b/  # 经过上述处理，原二码变为三码连续字母。
     - xform/([a-z]+)11/$1q/
-    - xform/([a-z]+)12/$1r/
-    - xform/([a-z]+)13/$1u/
-    - xform/([a-z]+)21/$1a/
-    - xform/([a-z]+)22/$1f/
-    - xform/([a-z]+)23/$1j/
-    - xform/([a-z]+)31/$1z/
-    - xform/([a-z]+)32/$1v/
-    - xform/([a-z]+)33/$1b/  # 经过上述处理，原二码变为三码连续字母。
+    - xform/([a-z]+)12/$1a/
+    - xform/([a-z]+)13/$1d/
+    - xform/([a-z]+)21/$1g/
+    - xform/([a-z]+)22/$1j/
+    - xform/([a-z]+)23/$1m/
+    - xform/([a-z]+)31/$1p/
+    - xform/([a-z]+)32/$1t/
+    - xform/([a-z]+)33/$1x/  # 经过上述处理，原二码变为三码连续字母。
     ## 对原一码的处理：
-    - xform/^([a-z])1'/$1\x2F/
-    - xform/^([a-z])2'/$1*/
-    - xform/^([a-z])3'/$1`/
+    # - xform/^([a-z])1;/$1\x2F/
+    # - xform/^([a-z])2;/$1*/
+    # - xform/^([a-z])3;/$1`/
     - xform/^([a-z])1$/$1\x2F/
     - xform/^([a-z])2$/$1*/
-    - xform/^([a-z])3$/$1`/  # 经过上述处理，原一码变为一码字母+一码符号。（符号有分词作用，其后不用跟单引号）：([a-z])([*`\x2F])。
+    - xform/^([a-z])3$/$1`/  # 经过上述处理，原一码变为一码字母+一码符号：([a-z])([*`\x2F])。（符号有分词作用，其后不用跟分隔符）
 
     # 1码全码的字，1码直接出候选
     - derive/^([a-z])[*`\x2F]$/$1/
@@ -147,10 +210,11 @@ speller:
 
     # 适配九键布局:
     # - xlit/qruafjzvb/123456789/
-    - xlit/qruafjzvb/1@#456789/  # 这里用@#代替23，保留数字23的选择功能，方便后续设置二选三选。
+    # - xlit/qruafjzvb/1@#456789/  # 这里用@#代替23，保留数字23的选择功能，方便后续设置二选三选。
+    - xlit/qadgjmptx/1@#456789/
 
 user_dict_set:
-  dictionary: Tigo_Matrix.extended
+  dictionary: 000_Tigo_Matrix.extended
   initial_quality: 0
   enable_completion: false
   enable_sentence: false
@@ -166,7 +230,7 @@ user_dict_set:
 # 自定义词典加词(ac引导)
 add_user_dict:
   tag: add_user_dict
-  dictionary: Tigo_Matrix.extended
+  dictionary: 000_Tigo_Matrix.extended
   initial_quality: -1
   user_dict: user_tg.custom.dict
 # ↓ 用户词典格式，tabledb（文本） 或 userdb （二进制）。
@@ -185,7 +249,7 @@ add_user_dict:
   tips: "〔自造词〕"
 
 translator:
-  dictionary: Tigo_Matrix.extended
+  dictionary: 000_Tigo_Matrix.extended
   initial_quality: 10000
   enable_completion: false
   ##  默认为不超过 2 个字的候选项显示输入码；将 2 改为 0 可关闭编码提示，
@@ -226,6 +290,7 @@ key_binder:
     - { when: composing, accept: Control+m, send: Return }
     - { when: composing, accept: Control+w, send: Control+BackSpace }
     # - { when: has_menu, accept: semicolon, send: 2 } # 用;进行选2
+    - { when: has_menu, accept: apostrophe, send: 2 } # 用'进行选2
     # - { when: has_menu, accept: apostrophe, send: 3 } # 用'进行选3
     - { when: composing, accept: Control+i, send: Shift+Right }
     - { when: composing, accept: Control+o, send: Shift+Left }

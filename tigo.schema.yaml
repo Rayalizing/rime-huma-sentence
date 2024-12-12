@@ -9,7 +9,7 @@ schema:
   author:
     - {gaboolic (裁缝)}
   description: |
-    虎码整句 实验版
+    虎码整句-实验版(基于墨奇)
 
 __include: moqi.yaml:/switches_engine
 __include: moqi.yaml:/phrase # 置顶
