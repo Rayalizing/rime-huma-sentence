@@ -5,7 +5,7 @@ patch:
 
   ## =========== 个人修改区 =================
   # 让【 】可以直接上屏（对应的重复上屏的功能也没了）
-  speller/alphabet: ";'zyxwvutsrqponmlkjihgfedcba"
+  # speller/alphabet: ";'zyxwvutsrqponmlkjihgfedcba"
   speller/algebra: # 将自定义一简后的词典重新派生出原有编码。
     - derive/q;/qo
     - derive/w;/wo
