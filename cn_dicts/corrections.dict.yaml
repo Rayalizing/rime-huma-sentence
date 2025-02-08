@@ -1,0 +1,108 @@
+# Rime dictionary
+# encoding: utf-8
+#https://github.com/amzxyz/RIME-LMDG
+#错音错字对照表
+---
+name: corrections
+version: "2025-02-05 00:07"
+sort: by_weight
+...
+麻麻赖赖	má;gm;gm;gl;zm[00; má;gm;gm;gl;zm[00; lài;ub;ur;uf;xx[o0,xx[ob; lài;ub;ur;uf;xx[o0,xx[ob;	156	(网络语)
+毁人不倦	huǐ;ju;jy;jy,ug;pu[r0,pu[rs; rén;pn;pn;pd;j0[00,jr[00; bú;ab;ad;ad,ax;c0[00,cb[00; juàn;rv;rv;rj;jh[h0,jh[hz;	431	(歌曲名)
+满山遍野	mǎn;dl;dl;dl;kl[00,kl[m0,kl[ml; shān;kl;lk;aa;vs[00; biàn;zc;zc;zb;mi[u0,mi[uc; yě;ly;ll;ly,yl;di[v0;	519	(漫)山遍野
+佛教胜地	fó;rf;rf;rf;jt[f0; jiào;lw;lw;wx;qh[h0,qh[hp; shèng;ou;ou;ou;vl[s0; dì;ty;ty;ty;ge[00,ge[y0;	1	佛教(圣)地
+杉杉来吃	shān;mp;mp;mp;ee[s0; shān;mp;mp;mp;ee[s0; lái;am;an;am,wb;a0[00,ah[b0; chī;kv;kq;kq;de[00,de[a0,de[ai;	424	(玩笑语)
+一泄千里	yī;aa;aa;aa;f0[00,fi[00; xiè;du;du;du;kl[a0,kl[ae; qiān;pu;pu;pa;lq[00; lǐ;tt;la;aa,tt;dl[00;	315	(玩笑语)
+膻中	shan;od;oa;od;vz[r0,vz[rf; zhong;kl;ll;aa,ka;d0[00,dg[s0;	364	膻(dàn)中
+按耐	àn;fn;fn;fa;uw[b0,uw[bn; nài;ec;ec;ce;lk[c0;	0	按捺(nà)
+甭介	béng;by;by;by;ct[y0; jie;rl;rl;ra,rd;jp[d0;	56	甭价(jie)
+别介	bié;kd;kd;dl;ds[00,ds[p0,ds[pd; jie;rl;rl;ra,rd;jp[d0;	31	别价(jie)
+槟榔	bin;mb;mb;mb;ew[t0,ew[th; lang;me;me;ml;ei[i0,ei[it;	633	bīng láng
+脖颈	bo;oz;oz;ob,oz;vn[w0,vn[wh; jing;jy;vr;yg;ru[w0,ru[wy;	483	bó gěng
+草薙	cao;cu;cu;cz;lo[00,lo[ns; zhi;cv;cf;cv;lo[u0,lo[ui;	88	cǎo tì
+掺和	chan;fp;fp;fc;uk[me; he;hk;hk;hk;x0[00,xd[k0;	438	chān huo
+称职	cheng;hx;hx;he;xx[y0,xx[yx; zhi;ev;eb;ev;qd[h0,qd[hb;	90	chèn zhí
+龇牙	ci;vb;vb;ic;ls[v0,ls[vb; ya;gp,ac;ap;ap;ly[00;	62	zī yá
+凑活	còu;dt;dt;dz;wa[i0,wa[im; huo;du;dk;du;ka[00,ka[s0;	246	凑合(he)
+道行	dao;zz;zz;zu;h0[00,ho[uc; hang;rd;ii;xd,xi;p0[00,px[00;	270	dào héng
+给予	gei;sk;sk;sh;ij[00,ij[d0,ij[dk; yu;sl;sl;sa,aa;iv[00;	11349	jǐ yǔ
+厚朴	hou;iz;iz;iz;xo[h0,xo[hi; pu;mb;mb;mb;ey[b0;	52	hòu pò
+馄饨	hun;ub;ub;uk;qo[v0,qo[vv; dun;ut;ut;ut;qf[sc;	898	hún tun
+角色	jiao;dy;dy;dy;xt[y0; se;db;db;db;xm[00,xm[b0;	20102	jué sè
+结扎	jie;sk;sk;sj;ig[d0,ig[dk; zha;fv;fv;fg;ua[e0;	126	jié zā
+钜惠	jù;jj;jj;jj;zn[n0,zn[nk; huì;ix;ax;xh,hx;nq[k0,nq[kh;	549	(巨)惠
+六安	liu;wb;wb;wb,dd,db;al[00; an;bn;bn;bn;wb[00,wb[n0;	110	lù ān
+埋怨	mai;tl;tl;tl;gd[l0; yuan;xx;xx;xe,xy;lz[h0,lz[hx;	1138	mán yuàn
+模板	mo;md;md;mm;el[o0,el[om; ban;my;my;mf;ex[r0,ex[ry;	14674	mú bǎn
+模具	mo;md;md;mm;el[o0,el[om; ju;qb;qb;ba,bq,qb;qh[b0;	1935	mú jù
+模样	mo;md;md;mm;el[o0,el[om; yang;my;my;my;eg[y0;	5185	mú yàng
+木讷	mu;ur;un,an;ad;em[00; na;yn;yn;yn;sm[j0,sm[jr;	471	mù nè
+弄堂	nong;wc;wc;cw,wc;nl[00,nl[c0; tang;xt;xt;tk,dt,xt;sg[t0;	126	lòng táng
+暖和	nuan;oy;oy;oy;oy[f0,oy[fr; he;hk;hk;hk;x0[00,xd[k0;	590	nuǎn huo
+偌大	nuo;rk;rk;rr;jl[n0,jl[nd; da;ar;un;ad;m0[00,md[00;	680	偌(ruò)大
+比萨	pi;bb;bb;bb;vv[00,vv[b0; sa;ci;ci;ci;lt[00,lt[i0,lt[ix;	197	bǐ sà
+强劲	qiang;gi;gi;gs;bd[00,bd[cc; jin;jl;vl;lg;ru[s0,ru[sl;	1505	qiáng jìng
+热列	rè;fh;fh;hv;uk[00,uk[ic; liè;dd;dd;dd;gp[00,gp[d0;	1	(烈)
+说服	shui;yx;ye;yd;s0[00,sh[dp; fu;oy;oy;oy;vz[00,vz[ry;	5642	shuō fú
+似的	si;rr;rr;ry;jv[j0,jv[jr; de;bu;bu,b;bu;u0[00,un[id;	703	似(shì)的
+藤蔓	teng;cu;cu;ct;lv[h0,lv[hk; man;cy;cy;cm;lo[y0,lo[yr;	320	téng wàn
+调换	tiao;yk;yk;yv;sm[g0,sm[gd; huan;fr;fd;fh;ux[00,ux[m0,ux[mm;	616	diào huàn
+胴体	tong;ok;ok;ot;vm[f0,vm[fd; ti;rb;rb;rb;je[f0,je[fi;	80	dòng tǐ
+荨麻	xun;cc;cc;cx;lb[k0,lb[kc; ma;gm;gm;gl;zm[00;	71	qián má
+吱声	zhi;kv;ky;kv;dc[i0; sheng;tu;up;um;gc[00,gc[s0;	217	zī shēng
+主角	zhu;wt;dw;dw;in[00,in[w0; jiao;dy;dy;dy;xt[y0;	24115	zhǔ jué
+比萨饼	bǐ;bb;bb;bb;vv[00,vv[b0; sà;ci;ci;ci;lt[00,lt[i0,lt[ix; bǐng;uk;uk;ub;qh[l0,qh[lc;	23
+脖颈儿	bo;oz;oz;ob,oz;vn[w0,vn[wh; jing;jy;vr;yg;ru[w0,ru[wy; er;pv;pv;pg;pe[00;	10	bó gěng er
+草薙剑	cao;cu;cu;cz;lo[00,lo[ns; zhi;cv;cf;cv;lo[u0,lo[ui; jian;qd,rd;rd;da,dq;jk[f0,jk[fp;	17	cǎo tì jiàn
+草薙京	cao;cu;cu;cz;lo[00,lo[ns; zhi;cv;cf;cv;lo[u0,lo[ui; jing;wx;wx;wx;gy[x0;	144	cǎo tì jīng
+吃比萨	chi;kv;kq;kq;de[00,de[a0,de[ai; pi;bb;bb;bb;vv[00,vv[b0; sa;ci;ci;ci;lt[00,lt[i0,lt[ix;	5	chī bǐ sà
+龇着牙	ci;vb;vb;ic;ls[v0,ls[vb; zhe;yo;yo;yo;gq[00,gq[m0; ya;gp,ac;ap;ap;ly[00;	14	zī zhe yá
+大宛马	da;ar;un;ad;m0[00,md[00; wan;bv;bv;be,by;wl[z0,wl[zj; ma;va;va;aa,vh;nm[00;	9	dà yuān mǎ
+独乐乐	du;qi;qi;qi;mc[00,mc[c0; le;px;pd;pd,px;by[x0; le;px;pd;pd,px;by[x0;	13	dú yuè lè
+海参崴	hai;dm;dm;dm;ke[k0,ke[km; shen;sp;sp;sp;km[e0,km[es; wei;un;en;uw;vn[fb;	304	hǎi shēn wǎi
+贾平凹	jia;xb;xr;bx,xb;vo[b0; ping;au;au;aa,gb;eh[00,eh[b0; ao;la,ka;la;aa;mf[i0;	247	jià píng wā
+卡脖子	ka;ub;ub;bx,ub;yf[y0,yf[yb; bo;oz;oz;ob,oz;vn[w0,vn[wh; zi;la;va;aa,vh;hi[00;	308	qiǎ bó zi
+六安市	liu;wb;wb;wb,dd,db;al[00; an;bn;bn;bn;wb[00,wb[n0; shi;wj;wj;wj;zr[00,zr[j0;	23	lù ān shì
+六安县	liu;wb;wb;wb,dd,db;al[00; an;bn;bn;bn;wb[00,wb[n0; xian;qs;qs;sq,qs;fk[s0;	3	lù ān xiàn
+六合区	liu;wb;wb;wb,dd,db;al[00; he;rk;rk;rk;jd[k0; qū;kx;kx;ki;nb[00,nb[i0;	3	lù hé qū
+螺蛳粉	luo;ix;ix;il;cq[i0,cq[is; shi;ij;ij;iu;cp[fr; fen;mf;md;mf;ph[p0,ph[pd;	645	luó sī fěn
+魔蝎座	mó;gg;gg;gm,mg;za[00,za[g0; xiē;ir;iv;ih;co[n0,co[nf; zuò;gr;gt;gz;xj[j0,xj[jg;	0	摩羯(jié)座
+鄱阳湖	pan;ce;pe;ef;tp[qt; yang;eo;eo;eo;to[r0; hu;do;do;dh;kc[v0,kc[vy;	1336	pó yáng hú
+比萨饼	pi;bb;bb;bb;vv[00,vv[b0; sa;ci;ci;ci;lt[00,lt[i0,lt[ix; bing;uk;uk;ub;qh[l0,qh[lc;	23	bǐ sà bǐng
+契科夫	qī;fd;fd;dd;ap[m0,ap[md; kē;hd;hu;hd;xj[00,xj[d0; fū;er;an;ad,er;hf[00;	0	契诃(hē)夫
+荨麻疹	qian;cc;cc;cx;lb[k0,lb[kc; ma;gm;gm;gl;zm[00; zhen;bp;bp;bp;aj[e0,aj[es;	198	xún má zhěn
+太行山	tai;dd;dd;dd;mi[00,mi[d0; xing;rd;ii;xd,xi;p0[00,px[00; shan;kl;lk;aa;vs[00;	390	tài háng shān
+头皮屑	tou;dd;dd;dd;wm[00,wm[d0; pi;py;vy;ad,ay,vd,vy,ya;rp[00; xue;uo;uo;ux;cy[v0,cy[vy;	525	tóu pi xiè
+万柏林	wàn;av;ap;ag,ap;fp[00,fp[d0; bó;mb;mb;mb;eu[b0; lín;mm;mm;mm;ee[00,ee[m0;	2	万柏(bǎi)林
+雪佛兰	xue;ye;ye;yx;tb[00,tb[j0; fo;rf;rf;rf;jt[f0; lan;bs;bs;bs,qe;ht[s0;	365	xuě fú lán
+鸭绿江	ya;jn;jn;nj,jn;sx[00,sx[n0; lv;su;su;sl;ib[k0,ib[ks; jiang;dg;dg;dg;ku[g0;	152	yā lù jiāng
+张柏芝	zhang;gi;gi;gi;bp[00,bp[c0; bai;mb;mb;mb;eu[b0; zhi;cv;cv;cv;lr[i0;	748	zhāng bó zhī
+众乐乐	zhong;rr;rr;rc;jj[j0,jj[jr; le;px;pd;pd,px;by[x0; le;px;pd;pd,px;by[x0;	20	zhòng yuè lè
+阿弥陀佛	a;ek;ek;ek;tz[00,tz[k0; mi;gx;gx;ge;bx[00,bx[y0,bx[yx; tuo;eb;eb;et;tw[v0,tw[vb; fo;rf;rf;rf;jt[f0;	371	ē mí tuó fó
+安徽六安	an;bn;bn;bn;wb[00,wb[n0; hui;rx;iw;xw;wv[fh,wv[fi; liu;wb;wb;wb,dd,db;al[00; an;bn;bn;bn;wb[00,wb[n0;	16	ān huī lù ān
+按耐不住	àn;fn;fn;fa;uw[b0,uw[bn; nài;ec;ec;ce;lk[c0; bú;ab;ad;ad,ax;c0[00,cb[00; zhù;rv;rv;rv;ji[n0,ji[nw;	0	按捺(nà)不住
+龇牙咧嘴	ci;vb;vb;ic;ls[v0,ls[vb; ya;gp,ac;ap;ap;ly[00; lie;kd;kd;kl;dg[p0,dg[pd; zui;ky;ky;kj,kz;ds[v0,ds[vt;	166	zī yá liě zuǐ
+大腹便便	da;ar;un;ad;m0[00,md[00; fu;ow;ow;of;ve[o0,ve[oh; bian;rg;rg;rg;jf[o0,jf[ob; bian;rg;rg;rg;jf[o0,jf[ob;	147	dà fù pián pián
+歇斯底里	jie;oq;or;qh;on[fe; si;cj;qj;jq,qj;zh[t0,zh[tj; di;gu;gd;gd;xb[i0,xb[id; li;tt;la;aa,tt;dl[00;	883	xiē sī dǐ lǐ
+力能扛鼎	li;vp;vp;gp;sl[00; neng;sb;sb;sb;k0[00,kv[vv; kang;fg;fg;fg;uu[g0; ding;po;ov;oa,od;qa[a0,qa[ap;	26	lì néng gāng dǐng
+模棱两可	mo;md;md;mm;el[o0,el[om; ling;mw;mw;ml,mw;eg[h0,eg[hh; liang;ar;ad;ad;ml[00; ke;dk;dk;dk;z0[00,zk[00;	848	mó léng liǎng kě
+南京六合	nan;ug;ug,ag;ua,uy;nm[g0,nm[gy; jing;wx;wx;wx;gy[x0; liu;wb;wb;wb,dd,db;al[00; he;rk;rk;rk;jd[k0;	5	nán jīng lù hé
+人模狗样	ren;pn;pn;pd;j0[00,jr[00; mo;md;md;mm;el[o0,el[om; gou;qj;qk;qj;mg[j0; yang;my;my;my;eg[y0;	146	rén mú góu yàng
+心宽体胖	xin;dd;dd;dd;hx[00; kuan;bj;be;bj,jb;wl[00,wl[e0,wl[ej; ti;rb;rb;rb;je[f0,je[fi; pang;ob;ob;ob;vh[u0,vh[us;	39	xīn kūan tǐ pán
+虚与委蛇	xu;hy;hy;hy;zc[y0; yu;va;aa;aa;fa[00,fa[fi; wei;hn;hn;hn;xb[n0; she;ib;ib;it;cw[v0,cw[vb;	93	xū yǔ wēi yí
+血脉偾张	xuè;pm;pm;pa,pm;ta[m0; mài;oy;oy;oy;vi[k0,vi[ks; fèn;rb;rr;rb;jn[l0,jn[lo; zhāng;gi;gi;gi;bp[00,bp[c0;	0	血脉贲(bēn)张 | 血脉偾(fèn)张
+血脉喷张	xuè;pm;pm;pa,pm;ta[m0; mài;oy;oy;oy;vi[k0,vi[ks; pēn;kb;kr;kb;dn[l0,dn[lo; zhāng;gi;gi;gi;bp[00,bp[c0;	0	血脉贲(bēn)张 | 血脉偾(fèn)张
+一模一样	yi;aa;aa;aa;f0[00,fi[00; mo;md;md;mm;el[o0,el[om; yi;aa;aa;aa;f0[00,fi[00; yang;my;my;my;eg[y0;	5083	yì mú yí yàng
+饮鸩解渴	yin;uq;ur;uq;qe[q0; jiu;bn;dn;na,ng,nv,ny;wp[x0,wp[xn; jie;dn;dn;jn;xt[00,xt[pq; ke;dr;dv;dh;ko[n0,ko[nf;	0	饮鸩(zhèn)解渴
+饮鸩止渴	yin;uq;ur;uq;qe[q0; jiu;bn;dn;na,ng,nv,ny;wp[x0,wp[xn; zhi;lb,la,ba;la;aa;si[00; ke;dr;dv;dh;ko[n0,ko[nf;	336	饮鸩(zhèn)止渴
+饮鸩解渴	yin;uq;ur;uq;qe[q0; zhen;bn;dn;na,ng,nv,ny;wp[x0,wp[xn; jie;dn;dn;jn;xt[00,xt[pq; ke;dr;dv;dh;ko[n0,ko[nf;	0	饮鸩(zhèn)解渴
+有模有样	you;uo;uo;ou,uo;nv[00,nv[y0; mo;md;md;mm;el[o0,el[om; you;uo;uo;ou,uo;nv[00,nv[y0; yang;my;my;my;eg[y0;	279	yǒu mú yǒu yàng
+装模作样	zhuang;ly;dy;yv;ag[ti; mo;md;md;mm;el[o0,el[om; zuo;rv;rv;rv;jw[00,jw[a0; yang;my;my;my;eg[y0;	485	zhuāng mú zuò yàng
+安徽六安市	an;bn;bn;bn;wb[00,wb[n0; hui;rx;iw;xw;wv[fh,wv[fi; liu;wb;wb;wb,dd,db;al[00; an;bn;bn;bn;wb[00,wb[n0; shi;wj;wj;wj;zr[00,zr[j0;	3	ān huī lù ān shì
+南京六合区	nan;ug;ug,ag;ua,uy;nm[g0,nm[gy; jing;wx;wx;wx;gy[x0; liu;wb;wb;wb,dd,db;al[00; he;rk;rk;rk;jd[k0; qu;kx;kx;ki;nb[00,nb[i0;	1	nán jīng lù hé qū
+安徽省六安市	an;bn;bn;bn;wb[00,wb[n0; hui;rx;iw;xw;wv[fh,wv[fi; sheng;uo;uo;ou;yt[q0,yt[qm; liu;wb;wb;wb,dd,db;al[00; an;bn;bn;bn;wb[00,wb[n0; shi;wj;wj;wj;zr[00,zr[j0;	8	ān huī shěng lù ān shì
+南无阿弥陀佛	na;ug;ug,ag;ua,uy;nm[g0,nm[gy; mo;ay;ay;ag,ay,ee;du[00; a;ek;ek;ek;tz[00,tz[k0; mi;gx;gx;ge;bx[00,bx[y0,bx[yx; tuo;eb;eb;et;tw[v0,tw[vb; fo;rf;rf;rf;jt[f0;	42	nā mó ē mí tuó fó
+南京市六合区	nan;ug;ug,ag;ua,uy;nm[g0,nm[gy; jing;wx;wx;wx;gy[x0; shi;wj;wj;wj;zr[00,zr[j0; liu;wb;wb;wb,dd,db;al[00; he;rk;rk;rk;jd[k0; qu;kx;kx;ki;nb[00,nb[i0;	2	nán jīng shì lù hé qū
+南无阿弥陀佛	nan;ug;ug,ag;ua,uy;nm[g0,nm[gy; wu;ay;ay;ag,ay,ee;du[00; a;ek;ek;ek;tz[00,tz[k0; mi;gx;gx;ge;bx[00,bx[y0,bx[yx; tuo;eb;eb;et;tw[v0,tw[vb; fo;rf;rf;rf;jt[f0;	42	nā mó ē mí tuó fó
+南无阿弥陀佛	nan;ug;ug,ag;ua,uy;nm[g0,nm[gy; wu;ay;ay;ag,ay,ee;du[00; e;ek;ek;ek;tz[00,tz[k0; mi;gx;gx;ge;bx[00,bx[y0,bx[yx; tuo;eb;eb;et;tw[v0,tw[vb; fo;rf;rf;rf;jt[f0;	42	nā mó ē mí tuó fó
+

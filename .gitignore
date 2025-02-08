@@ -2,6 +2,9 @@
 /venv/
 .DS_Store
 
+# 字典文件(大文件, 不提交)
+*.gram
+
 # IDEA
 .idea/
 *.iws

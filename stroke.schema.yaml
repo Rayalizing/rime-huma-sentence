@@ -3,26 +3,13 @@
 
 schema:
   schema_id: stroke
-  name: "五筆畫"
+  name: "反查：五笔画"
   version: "0.5"
   author:
-    - 四季的風
-    - 雪齋
-    - Kunki Chou
+    - amzxyz
   description: |
-    五筆畫
-    h,s,p,n,z 代表橫、豎、撇、捺、折
-  dependencies:
-    - luna_pinyin
-
-switches:
-  - name: ascii_mode
-    reset: 0
-    states: [ 中文, 西文 ]
-  - name: full_shape
-    states: [ 半角, 全角 ]
-  - name: ascii_punct
-    states: [ 。，, ．， ]
+    五笔画
+    h,s,p,n,z 代表橫、竖、撇、捺、折
 
 engine:
   processors:
@@ -35,54 +22,18 @@ engine:
     - navigator
     - express_editor
   segmentors:
-    - ascii_segmentor
-    - matcher
     - abc_segmentor
-    - punct_segmentor
-    - fallback_segmentor
   translators:
     - punct_translator
-    - reverse_lookup_translator
     - table_translator
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz"
   delimiter: " '"
 
-menu:
-  page_size: 9
-
 translator:
   dictionary: stroke
-  preedit_format:
-    - xlit/hspnz/一丨丿丶乙/
-  comment_format:
-    - xform/~//
-    - xlit/hspnz/一丨丿丶乙/
-
-abc_segmentor:
-  extra_tags:
-    - reverse_lookup
-
-reverse_lookup:
-  dictionary: luna_pinyin
-  prefix: "`"
-  suffix: "'"
-  tips: 〔拼音〕
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
-  comment_format:
-    - xlit/hspnz/一丨丿丶乙/
-
-punctuator:
-  import_preset: default
+  enable_user_dict: false
 
 key_binder:
-  import_preset: default
-
-recognizer:
-  import_preset: default
-  patterns:
-    reverse_lookup: "`[a-z]*'?$"
+  __include: default:/key_binder?
